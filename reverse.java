@@ -4,20 +4,21 @@ import java.util.List;
 
 public class reverse {
     public static void main(String[] args) {
-        List<String> hostNameList = new ArrayList<String>();
+        List<String> ipList = new ArrayList<String>();
 
-        hostNameList.add("10.250.24.30");
-        hostNameList.add("130.217.208.16");
-        hostNameList.add("127.0.0.2");
+        for (String ip : args) {
+            ipList.add(ip.trim());
+        }
+
         try {
 
-            for (String hostName : hostNameList) {
+            for (String hostName : ipList) {
                 InetAddress address = InetAddress.getByName(hostName);
                 String name = address.getHostName();
                 if (name.compareTo(hostName) == 0) {
                     System.out.println(hostName + " : no name");
-                    
-                }else{
+
+                } else {
                     System.out.println(hostName + " : " + address.getHostName());
                 }
             }
@@ -25,7 +26,8 @@ public class reverse {
 
         catch (Exception e) {
             // TODO: handle exception
-            //System.out.println( + " : " + e.getMessage());
-        
-        }}}
+            // System.out.println( + " : " + e.getMessage());
 
+        }
+    }
+}
