@@ -10,7 +10,7 @@ public class SimpleServer {
 
         try {
             // Constant of port number
-            final int port = 31446;
+            final int port = 31447;
             // Create a server socket
             ServerSocket server = new ServerSocket(port);
             // Outputs to console the port the server is listening on

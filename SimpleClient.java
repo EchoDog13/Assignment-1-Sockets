@@ -14,7 +14,7 @@ public class SimpleClient {
         Socket sock;
 
         try {
-            sock = new Socket(ia, 31467);
+            sock = new Socket(ia, 31447);
             PrintWriter writer = new PrintWriter(sock.getOutputStream(), true);
             writer.println(args[0]);
             BufferedReader read = new BufferedReader(new InputStreamReader(sock.getInputStream()));
