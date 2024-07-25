@@ -5,7 +5,7 @@ public class SimpleClient {
     public static void main(String[] args) {
         InetAddress ia;
         try {
-            ia = InetAddress.getByName("localhost");
+            ia = InetAddress.getByName("lab-rg06-26.cms.waikato.ac.nz");
         } catch (UnknownHostException e) {
             System.err.println("Unknown name for ip");
             return;
