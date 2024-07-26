@@ -10,9 +10,10 @@ public class SimpleServer {
 
         try {
             // Constant of port number
-            final int port = 31447;
+            // final int port = 31447;
             // Create a server socket
-            ServerSocket server = new ServerSocket(port);
+            ServerSocket server = new ServerSocket(0);
+            int port = server.getLocalPort();
             // Outputs to console the port the server is listening on
             System.out.println("Server listening on port" + port);
 

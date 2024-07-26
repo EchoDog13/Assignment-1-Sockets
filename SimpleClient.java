@@ -10,11 +10,11 @@ public class SimpleClient {
             System.err.println("Unknown name for ip");
             return;
         }
-
         Socket sock;
 
         try {
-            sock = new Socket(ia, 31447);
+            int socket = Integer.parseInt(args[0]);
+            sock = new Socket(ia, socket);
             PrintWriter writer = new PrintWriter(sock.getOutputStream(), true);
             writer.println(args[0]);
             BufferedReader read = new BufferedReader(new InputStreamReader(sock.getInputStream()));
