@@ -27,7 +27,7 @@ public class SimpleServer {
                 // Gets IP of the client
                 String clientIP = clientAddress.getHostAddress();
                 // Gets hostname of the client
-                String clientHostname = clientAddress.getByName(clientIP).getHostName();
+                String clientHostname = clientAddress.getHostName()
 
                 // Prints the IP and hostname of the client to the console of the client
                 PrintWriter writer = new PrintWriter(s.getOutputStream(), true);
