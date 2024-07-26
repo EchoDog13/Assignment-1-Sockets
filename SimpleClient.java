@@ -5,21 +5,29 @@ public class SimpleClient {
     public static void main(String[] args) {
         InetAddress ia;
         try {
-            ia = InetAddress.getByName("lab-rg06-26.cms.waikato.ac.nz");
+            // Attempts to get the IP address of the server
+            String hostName = args[0];
+            ia = InetAddress.getByName(hostName);
+            // Handles any errors and prints them to the console
         } catch (UnknownHostException e) {
             System.err.println("Unknown name for ip");
             return;
         }
+        // Creates the socket
         Socket sock;
 
         try {
-            int socket = Integer.parseInt(args[0]);
+            // Reads socket number from the command line
+            int socket = Integer.parseInt(args[1]);
+
+            // Attempts to connect to the server
             sock = new Socket(ia, socket);
+            // print the response from the server
             PrintWriter writer = new PrintWriter(sock.getOutputStream(), true);
             writer.println(args[0]);
             BufferedReader read = new BufferedReader(new InputStreamReader(sock.getInputStream()));
             read.lines().forEach(System.out::println);
-
+            // Closes the socket
             sock.close();
         } catch (IOException e) {
             System.err.println(("IO Execption" + e));
