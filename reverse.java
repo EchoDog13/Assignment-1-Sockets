@@ -6,6 +6,8 @@ public class reverse {
 
     /**
      * @param args args takes agurment of a ip address/s to resolve to a hostname
+     *             Multiple ip addresses can be provided as arguments seperated by a
+     *             space
      */
     public static void main(String[] args) {
         // List to store ip addresses to resolve
@@ -13,12 +15,12 @@ public class reverse {
 
         // Add ip addresses to the list from provided arguments and trims extra content
         for (String ip : args) {
+            // Add to list and trime blank space
             ipList.add(ip.trim());
         }
 
         // Try catch to catch resolution errors
         try {
-
             // Loop through the list of ip addresses and resolve them to hostnames
             for (String hostName : ipList) {
                 InetAddress address = InetAddress.getByName(hostName);

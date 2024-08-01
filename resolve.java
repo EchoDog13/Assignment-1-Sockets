@@ -9,9 +9,11 @@ import java.util.Scanner;
  * To use the program, provide the hostname as an argument
  */
 public class resolve {
-
     /**
-     * @param args takes agurment of a hostname
+     * @param args takes agurment of a hostname which the program will attempt to
+     *             resolve to an IP address
+     *             Multiple hostnames can be provided as arguments seperated by a
+     *             space
      */
     public static void main(String[] args) {
 

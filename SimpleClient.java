@@ -5,8 +5,9 @@ public class SimpleClient {
     public static void main(String[] args) {
         InetAddress ia;
         try {
-            // Attempts to get the IP address of the server
+            // Reads hostname arugment from command line
             String hostName = args[0];
+            // Gets the IP address of the hostname
             ia = InetAddress.getByName(hostName);
             // Handles any errors and prints them to the console
         } catch (UnknownHostException e) {
