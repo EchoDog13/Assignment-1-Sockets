@@ -11,6 +11,7 @@ public class SimpleServer {
         try {
             // Create a server socket and assign it to an avaliable port
             ServerSocket server = new ServerSocket(0);
+            // Gets the port the server is listening on
             int port = server.getLocalPort();
             // Outputs to console the port the server is listening on
             System.out.println("Server listening on port " + port);
@@ -19,17 +20,16 @@ public class SimpleServer {
             while (true) {
                 // Accept client connection
                 Socket s = server.accept();
-
                 // Gets Inet address of the client
                 InetAddress clientAddress = s.getInetAddress();
                 // Gets IP of the client
                 String clientIP = clientAddress.getHostAddress();
-                // Gets hostname of the client
+
                 String clientHostname = clientAddress.getHostName();
+                // Gets hostname of the client
+                String hostName = s.getInetAddress().getHostName();
 
-		String hostName = s.getInetAddress().getHostName();
-
-		System.out.println(hostName);
+                System.out.println(hostName);
 
                 // Prints the IP and hostname of the client to the console of the client
                 PrintWriter writer = new PrintWriter(s.getOutputStream(), true);
