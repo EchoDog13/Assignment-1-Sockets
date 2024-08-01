@@ -1,7 +1,19 @@
 import java.net.*;
 import java.io.*;
 
+/**
+ * This program works with simple client to communicate with the server and
+ * print hostnames and IP addresses
+ */
 public class SimpleClient {
+    /**
+     * 
+     * Kyle Barker
+     * Student ID: 1630724
+     * 
+     * @param args Takes the hostname and port number as arguments
+     * 
+     */
     public static void main(String[] args) {
 
         if (args.length != 2) {

@@ -4,7 +4,11 @@ import java.net.*;
 public class SimpleServer {
 
     /**
-     * @param args
+     * Kyle Barker
+     * Student ID: 1630724
+     * 
+     * 
+     * @param args Takes no arguments
      */
     public static void main(String[] args) {
 

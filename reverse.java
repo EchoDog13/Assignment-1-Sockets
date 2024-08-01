@@ -5,6 +5,10 @@ import java.util.List;
 public class reverse {
 
     /**
+     * Kyle Barker
+     * Student ID: 1630724
+     * 
+     * 
      * @param args args takes agurment of a ip address/s to resolve to a hostname
      *             Multiple ip addresses can be provided as arguments seperated by a
      *             space

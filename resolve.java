@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * Kyle Barker
+ * Student ID: 1630724
+ * 
+ * 
  * This program resolves the hostname to IP address using the InetAddress class
  * in Java
  * To use the program, provide the hostname as an argument
