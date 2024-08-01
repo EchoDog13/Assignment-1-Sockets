@@ -19,15 +19,17 @@ public class SimpleServer {
             while (true) {
                 // Accept client connection
                 Socket s = server.accept();
-                // Create a reader to read data from the client
-                BufferedReader reader = new BufferedReader(new InputStreamReader(s.getInputStream()));
 
                 // Gets Inet address of the client
                 InetAddress clientAddress = s.getInetAddress();
                 // Gets IP of the client
                 String clientIP = clientAddress.getHostAddress();
                 // Gets hostname of the client
-                String clientHostname = clientAddress.getCanonicalHostName();
+                String clientHostname = clientAddress.getHostName();
+
+		String hostName = s.getInetAddress().getHostName();
+
+		System.out.println(hostName);
 
                 // Prints the IP and hostname of the client to the console of the client
                 PrintWriter writer = new PrintWriter(s.getOutputStream(), true);
